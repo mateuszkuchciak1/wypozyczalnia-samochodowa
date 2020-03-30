@@ -1,0 +1,88 @@
+<div class="container my-2">
+<div class="card border-0 shadow container"> 
+    <app-navbar></app-navbar>
+    
+
+<div class="row">
+    <div class="col-md-12 container text-center"><h4 class="display-4">Rezerwacja</h4></div>
+<div class="pt-5 col-md-6 text-danger my-5">
+    <form [formGroup]="rezerwacjaForm">
+            <div class="form-group">
+                <label for="samochod">Samochod</label>
+                <select [(ngModel)]="nowy" formControlName="samochod" id="samochod" class="form-control"  >
+                    <option *ngFor="let samochod of samochody" value="{{samochod.model}}" >{{samochod.marka}} {{samochod.model}}</option>
+                </select>
+            <p *ngIf="!rezerwacjaForm.get('samochod').valid && rezerwacjaForm.get('samochod').dirty">To pole jest wymagane!</p>
+            </div>
+
+            <div class="form-group">
+                <label for="name"> imię</label>
+                <input formControlName="imie" type="text" id="name" placeholder="Twoje imię oraz nazwisko" class="form-control">
+                <p *ngIf="!rezerwacjaForm.get('imie').valid && rezerwacjaForm.get('imie').dirty">To pole jest wymagane!</p>
+            </div>
+            <div class="form-group">
+                <label for="email">Nazwisko</label>
+                <input formControlName="nazwisko" type="email" id="email" placeholder="wpisz e-mail" class="form-control">
+                <p *ngIf="!rezerwacjaForm.get('nazwisko').valid && rezerwacjaForm.get('nazwisko').dirty">To pole jest wymagane!</p>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input formControlName="email" type="email" id="email" placeholder="wpisz e-mail" class="form-control">
+                <p *ngIf="!rezerwacjaForm.get('email').valid && rezerwacjaForm.get('email').dirty">To pole jest wymagane!</p>
+            </div>
+            <div class="form-group">
+                
+                    <label for="example-datetime-local-input" class="col-form-label">Data i czas odbioru</label>
+                    <input formControlName="data_odbioru" class="form-control" type="datetime-local" value="" id="example-datetime-local-input">
+                    <p *ngIf="!rezerwacjaForm.get('data_odbioru').valid && rezerwacjaForm.get('data_odbioru').dirty">To pole jest wymagane!</p>
+            </div>
+            <div class="form-group">
+                
+                <label for="example-datetime-local-input" class="col-form-label">Data i czas zwrotu</label>
+                
+                <input formControlName="data_zwrotu" class="form-control" type="datetime-local" value="" id="example-datetime-local-input">
+                <p *ngIf="!rezerwacjaForm.get('data_zwrotu').valid && rezerwacjaForm.get('data_zwrotu').dirty">To pole jest wymagane!</p>
+            </div>
+
+    <div class="form-group">
+        <label for="country">Miasto odbioru i zwrotu</label>
+        <select formControlName="miasto" id="country" class="form-control">
+            <option value="Rzeszów">Rzeszów</option>
+            
+        </select>
+        <p *ngIf="!rezerwacjaForm.get('miasto').valid && rezerwacjaForm.get('miasto').dirty">To pole jest wymagane!</p>
+    </div>
+
+        <button [disabled]="rezerwacjaForm.invalid" (click)="createRezerwacja()" type="submit" class="btn btn-primary">Wyslij</button>
+
+        
+    </form>	
+</div>
+
+
+<div class="col-md-6 my-5">
+    
+    <div *ngFor="let samochod of samochody">
+        <div  *ngIf="samochod.model==nowy" class="card mb-5">
+                <img src="{{samochod.img}}" alt="obraz karty" class="card-img-top zdjecia_rezerwacja">
+                <div class="card-body">
+                    <h4 class="card-title">{{samochod.marka}} {{samochod.model}}</h4>
+                    <h5 class="card-subtitle"></h5>
+                    <ul class="my-2">
+                        <li>Moc: {{samochod.moc}}</li>
+                        <li>Opis: {{samochod.opis}}</li>
+                    </ul>
+                
+                </div>
+            </div>
+            </div>
+
+            
+</div>
+
+</div>
+
+</div>
+<app-footer></app-footer>
+</div>
+

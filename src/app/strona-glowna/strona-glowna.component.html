@@ -1,0 +1,115 @@
+<div class="container my-2">
+    <div class="card border-0 shadow container">
+
+        <app-navbar></app-navbar>
+
+        <div class="jumbotron jumbotron_1 text-center text-white">
+
+            <div class="d-flex flex-column align-items-center my-5">
+                <h1>Nowa jakość wypozyczania</h1>
+                <button [routerLink]="['/samochody']" class="btn btn-primary">Zobacz nasze samochody</button>
+            </div>
+        </div>
+
+        <div class="container text-center">
+            <h1 class="display-4">Dlaczego my?</h1>
+        </div>
+        <div class="my-5">
+            <div class="row text-center">
+                <div class="col-md-4">
+
+                    <img class="obrazki" src="assets/images/ikona_kierownica.png" alt="obraz karty"
+                        class="card-img-top">
+                    <h5 class="display-5">Brak limitu kilometrów</h5>
+                </div>
+                <div class="col-md-4">
+
+                    <img class="obrazki" src="assets/images/ikona_kierownica.png" alt="obraz karty"
+                        class="card-img-top">
+                    <h5 class="display-5">Brak kaucji</h5>
+                </div>
+                <div class="col-md-4">
+
+                    <img class="obrazki" src="assets/images/ikona_kierownica.png" alt="obraz karty"
+                        class="card-img-top">
+                    <h5 class="display-5">Tylko u nas najlepsze samochody</h5>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container my-5">
+
+            <div class="container text-center">
+                <h1 class="display-4">Dostępne marki samochodów</h1>
+            </div>
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-xs-12 col-md-3"><img src="assets/images/lambo.png" [routerLink]="['/samochody']" alt="lambo"
+                            class="miniaturki_logo img-thumbnail"></div>
+                    <div class="col-xs-12 col-md-3"><img src="assets/images/mcLaren.png" [routerLink]="['/samochody']"
+                            alt="mclaren" class="img-thumbnail">
+                        <div class=""><img src="assets/images/maybach.png" [routerLink]="['/samochody']" alt="maybach"
+                                class="img-thumbnail"></div>
+                    </div>
+                    <div class="col-xs-12 col-md-3"><img src="assets/images/ferrari.png" [routerLink]="['/samochody']"
+                            alt="ferrari" class="img-thumbnail"></div>
+                    <div class=" col-xs-12 col-md-3"><img src="assets/images/mustang.png" [routerLink]="['/samochody']"
+                            alt="mustang" class="img-thumbnail">
+                        <div class=""><img src="assets/images/mercedes.png" [routerLink]="['/samochody']" alt="mercedes"
+                                class="miniaturki_logo_mercedes img-thumbnail"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        
+            
+            <div class="container text-center">
+                <h1>Nasza flota juz na ciebie czeka</h1>
+            </div>
+
+            <div class="my-5">
+                <video class="video_ferrari" loop muted autoplay oncanplay="this.play()"
+                    onloadedmetadata="this.muted = true">
+                    <source src="/assets/videos/ferrari_film.mp4" type="video/mp4">
+                </video>
+            </div>
+        
+
+
+
+
+
+
+        <div class="jumbotron container text-center my-5">
+            <h1 class="display-4">Rezerwuj jednym kliknięciem</h1>
+        </div>
+
+
+        <div class="container">
+            <div class="row card-deck">
+                <div *ngFor="let samochod of samochody" class="card mb-5 col-xs-12 col-md-4">
+
+                    <img src="{{samochod.img}}" alt="obraz karty" class="card-img-top rezerwacja_miniaturki">
+
+                    <div class="card-body">
+                        <h4 class="card-title">{{samochod.marka}} {{samochod.model}}</h4>
+                        <h5 class="card-subtitle">Moc: {{samochod.moc}}</h5>
+                        <a [routerLink]="['/rezerwacja']" class="btn btn-primary card-link my-2">Rezerwuj</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+<app-footer></app-footer>
+
+</div>

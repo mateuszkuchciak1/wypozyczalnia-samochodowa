@@ -1,0 +1,91 @@
+<div class="container my-2">
+    <div class="card border-0 shadow container">
+        <app-navbar></app-navbar>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 container text-center">
+                    <h4 class="display-4">Kontakt</h4>
+                </div>
+                <div class="col-md-6 my-5">
+
+                    <div class="card mb-5 my-5">
+                        <img src="assets/images/mapa.png" alt="obraz karty" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title">Lokalizacja</h4>
+                            <h5 class="card-subtitle">Sucharskiego 2, Rzeszów</h5>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 my-5">
+
+                    <div class="card my-5">
+                        <div class="jumbotron my-2">
+
+                            <h1>Formularz kontaktowy</h1>
+
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="pt-3 text-danger">
+                            <form [formGroup]="kontaktForm">
+                                <div class="form-group">
+                                    <label for="name"> Imię</label>
+                                    <input type="text" formControlName="imie" placeholder="Twoje imię"
+                                        class="form-control">
+                                    <p *ngIf="!kontaktForm.get('imie').valid && kontaktForm.get('imie').dirty">To pole
+                                        jest wymagane!</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Nazwisko</label>
+                                    <input type="text" formControlName="nazwisko" placeholder="Twoje nazwisko"
+                                        class="form-control">
+                                    <p *ngIf="!kontaktForm.get('nazwisko').valid && kontaktForm.get('nazwisko').dirty">
+                                        To pole jest wymagane!</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input formControlName="email" type="email" placeholder="wpisz e-mail"
+                                        class="form-control">
+                                    <p *ngIf="!kontaktForm.get('email').valid && kontaktForm.get('email').dirty">To pole
+                                        jest wymagane!</p>
+                                </div>
+                                <div class="form-group">
+
+                                    <label for="example-datetime-local-input" class="col-form-label">Pytanie</label>
+                                    <textarea formControlName="pytanie" class="form-control" id="text"
+                                        rows="3"></textarea>
+                                    <p *ngIf="!kontaktForm.get('pytanie').valid && kontaktForm.get('pytanie').dirty">To
+                                        pole jest wymagane!</p>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="country">Miasto</label>
+                                    <input formControlName="miasto" type="text" placeholder="wpisz miasto zamieszkania"
+                                        class="form-control">
+                                    <p *ngIf="!kontaktForm.get('miasto').valid && kontaktForm.get('miasto').dirty">To
+                                        pole jest wymagane!</p>
+                                </div>
+                                <button [disabled]="kontaktForm.invalid" (click)="createKontakt()" type="submit"
+                                    class="btn btn-primary">Wyslij</button>
+
+                            </form>
+                        </div>
+
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <app-footer></app-footer>
+</div>

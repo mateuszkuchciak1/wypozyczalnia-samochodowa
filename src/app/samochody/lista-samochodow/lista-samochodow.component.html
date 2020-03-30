@@ -1,0 +1,70 @@
+<div class="container my-2">
+	<div class="card border-0 shadow container">
+		<app-navbar></app-navbar>
+		<div class="container text-center my-5">
+			<div class="col-md-12 container text-center">
+				<h4 class="display-4">Dostępne samochody</h4>
+			</div>
+		</div>
+
+
+		<div class="input-group container">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="basic-addon3">Wyszukaj markę i model samochodu</span>
+			</div>
+
+			<select class="form-control" id="course" [(ngModel)]="samochod_wyszukaj" name="samochod.marka">
+				<option >Wszystkie</option>
+				<option *ngFor="let samochod of samochody" [value]="samochod.model">{{samochod.marka}}
+					{{samochod.model}}</option>
+			</select>
+
+		</div>
+
+		<div class="container pt-5">
+			<div class="row">
+
+			<div *ngFor="let samochod of samochody">
+				
+				<div *ngIf="(samochod.model==samochod_wyszukaj)" >
+					<div class="container">
+					<div class="col-md-12 container">
+						<div class="card mb-5">
+							
+							<img src="{{samochod.img}}" alt="obraz karty" class="card-img-top miniaturki_rozmiar">
+							<div class="card-body">
+								<h4 class="card-title">{{samochod.marka}} {{samochod.model}}</h4>
+								<h5 class="card-subtitle">Moc: {{samochod.moc}} </h5>
+
+								<a [routerLink]="['/rezerwacja']" class="btn btn-primary card-link my-2">Rezerwuj</a>
+							</div>
+						
+					</div>
+					</div>
+				</div>
+				</div>
+				<div *ngIf="(samochod_wyszukaj==('Wszystkie'))" >
+					<div class="container">
+					<div class="col-md-12 container"> 
+						<div class="card mb-5">
+							<img src="{{samochod.img}}" alt="obraz karty" class="card-img-top miniaturki_rozmiar">
+							<div class="card-body">
+								<h4 class="card-title">{{samochod.marka}} {{samochod.model}}</h4>
+								<h5 class="card-subtitle">Moc: {{samochod.moc}} </h5>
+
+								<a [routerLink]="['/rezerwacja']" class="btn btn-primary card-link my-2">Rezerwuj</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			
+		
+		</div>
+
+
+	</div>
+</div>
+</div>
+<app-footer></app-footer>
+</div>

@@ -1,0 +1,34 @@
+{
+    "samochody":{
+        "-LERFpJBFcPd9ucEd570" :{
+            "id":1,
+            "marka":"Ferrari",
+            "model":"458 Italia",
+            "moc":605,
+            "img":"/assets/images/ferrari_czer.jpg"
+        },
+        "-LERIwa2XC-r8x0PCcms" :{
+            "id":2,
+            "marka":"Maybach",
+            "model":"S 560",
+            "moc":463,
+            "img":"/assets/images/maybach.jpg"
+        },
+        "-LEpfF8ZPUvJwtBYFkBA" :{
+            "id":1,
+            "marka":"Ford",
+            "model":"Mustang GT",
+            "moc":421,
+            "img":"/assets/images/mustang.jpg"
+        },
+        "-LEqB4-0UE47UfxNsVDH" :{
+            "id":1,
+            "marka":"Mercedes",
+            "model":"AMG GT",
+            "moc":522,
+            "img":"/assets/images/mercedes.jpg"
+        }
+
+
+    }
+}

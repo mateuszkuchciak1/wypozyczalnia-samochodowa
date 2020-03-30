@@ -1,0 +1,28 @@
+.jumbotron_1{
+  background: url("/assets/images/nowy.png") no-repeat center center;
+  background-size: cover;
+  min-height: 400px;
+}
+
+.miniaturki_logo{
+    height: 310px;
+}
+.miniaturki_logo_mercedes{
+    height: 210px;
+    width: 100%;
+}
+
+.video_ferrari{
+    width: 100%;
+}
+.rezerwacja_miniaturki{
+    width: 200px;
+    height: 200px;
+}
+
+.obrazki{
+    width: 300px;
+    height: 300px;
+}
+
+
