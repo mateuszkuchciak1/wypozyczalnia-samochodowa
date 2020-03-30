@@ -11,6 +11,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Krótka prezentacja warstwy użytkowej
+
 [![Everything Is AWESOME](http://i.imgur.com/Ot5DWAW.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Everything Is AWESOME")
 
 
