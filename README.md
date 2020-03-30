@@ -11,4 +11,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=VID)
