@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
 
+![Technologie użyte](http://imagizer.imageshack.com/a/img923/6023/cEgb18.png)
+
 ## Jak to uruchomić?
 
 - Ściągnij .zipa w zakładce "clone or download"
