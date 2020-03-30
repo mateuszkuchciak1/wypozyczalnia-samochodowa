@@ -15,6 +15,6 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 
 ## Krótka prezentacja warstwy użytkowej
 
-[![Prezentacja](http://imageshack.com/a/img921/289/bhrTtd.png)](https://youtu.be/2VawOtk_s7k "Prezentacja warstwy użytkowej")
+[![Prezentacja](http://imagizer.imageshack.com/a/img924/2960/qIajUN.png)](https://youtu.be/2VawOtk_s7k "Prezentacja warstwy użytkowej")
 
 
