@@ -17,12 +17,12 @@
 
             <div class="form-group">
                 <label for="name"> imię</label>
-                <input formControlName="imie" type="text" id="name" placeholder="Twoje imię oraz nazwisko" class="form-control">
+                <input formControlName="imie" type="text" id="name" placeholder="Twoje imię" class="form-control">
                 <p *ngIf="!rezerwacjaForm.get('imie').valid && rezerwacjaForm.get('imie').dirty">To pole jest wymagane!</p>
             </div>
             <div class="form-group">
                 <label for="email">Nazwisko</label>
-                <input formControlName="nazwisko" type="email" id="email" placeholder="wpisz e-mail" class="form-control">
+                <input formControlName="nazwisko" type="text" id="surname" placeholder="nazwisko" class="form-control">
                 <p *ngIf="!rezerwacjaForm.get('nazwisko').valid && rezerwacjaForm.get('nazwisko').dirty">To pole jest wymagane!</p>
             </div>
             <div class="form-group">

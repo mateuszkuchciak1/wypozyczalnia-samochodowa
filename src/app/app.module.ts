@@ -15,6 +15,8 @@ import{ AngularFireDatabaseModule} from "angularfire2/database";
 import { environment } from 'src/environments/environment';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpService } from './core/serwisy/http.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -50,10 +52,11 @@ const routes:Routes=[
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
     
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
